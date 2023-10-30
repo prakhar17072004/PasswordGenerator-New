@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Random Passward Generator</title>
+</head>
+<body>
+    <div class="wrapper ">
+        <h1>Passward Generator</h1>
+        <div class="display-container">
+            <input readonly placeholder="Password " class="display" data-passwordDisplay>
+            <button data-copy class="copyBtn">
+                <span data-copyMsg  class="tooltip"></span>
+                <img src="./images/copy.svg" alt="copy" height="23" width="23" class="copy">
+            </button>
+            
+            
+        </div>
+        <div class="input-container  ">
+            <div class="length-container">
+                <p >Password Length</p>
+                <p data-lengthNumber>0</p>
+            </div>
+            <!--slider-->
+            <input id="slider" type="range" min="4" max="32" value="16" data-lengthSlider>
+            
+            <!--checkboxes-->
+            <div >
+                
+                <div class="check">
+                    <input type="checkbox" id="uppercase" >
+                    <label for="uppercase" >Include Uppercase</label>
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="lowercase" >
+                    <label for="lowercase" >Include Lowercase</label>
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="number" >
+                    <label for="Number" >Include Number</label>
+                </div> <div class="check">
+                    <input type="checkbox" id="symbol" >
+                    <label for="symbols" >Include Symbols</label>
+                </div>
+                 
+                <div class="strength-container">
+                    <p>Strength</p>
+                    <div class="indicator"data-indicator></div>
+                </div>
+                <!--gnerate passward-->
+                <button class="btn generate" id="generate">Generate Passward</button>
+            </div>
+        </div>
+        
+    </div>
+   
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+   
+</body>
+</html>
